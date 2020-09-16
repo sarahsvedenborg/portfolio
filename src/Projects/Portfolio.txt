@@ -1,0 +1,4 @@
+name: Portfolio,
+Technology: Vue,
+Elements learned: Custom responsive grid, animations, firebase backend, email service,
+Uxdesign: design with grid, code with grid
