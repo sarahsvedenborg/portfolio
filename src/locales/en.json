@@ -1,0 +1,69 @@
+{
+  "Home": {
+    "name": "Sarah",
+    "title": "UX Engineer",
+    "sub1": "Connecting",
+    "sub2": "Design",
+    "sub3": "and",
+    "sub4": "Developemnt",
+    "scrollDown": "Scroll down",
+    "subTitle1": "UX Designer",
+    "subTitle2": "Developer",
+    "subTitle3": "UX Engineer",
+    "section1": {
+      "par1": "TODO Paragraph 1",
+      "par2": "TODO Paragraph 2",
+      "par3": "TODO Paragraph 3"
+    },
+    "section2": {
+      "par1": "TODO Paragraph 1",
+      "par2": "TODO Paragraph 2",
+      "par3": "TODO Paragraph 3"
+    },
+    "section3": {
+      "par1": "TODO Paragraph 1",
+      "par2": "TODO Paragraph 2",
+      "par3": "TODO Paragraph 3"
+    }
+  },
+  "NavBar": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Projects": {
+    "heading": "Projects",
+    "strangeCheckmarks": "What's up with these checkmarks?",
+    "dev": "Front-end",
+    "ux": "UX"
+  },
+  "About": {
+    "heading": "About me"
+  },
+  "FunFact": {
+    "heading": "Fun Fact",
+    "par1": "The ticks in the checkboxes are going the wrong way you say? No, they are not. I’m left handed, and this is the way I have always ticked my boxes. Took me years to realize that ‘normal’ people tick their boxes the opposite way.",
+    "par2": "When designing the ticks for the checkboxes on this website, I instinctively made them tapering off to the left (as I am used to seeing them in my own handwriting). However, when tweaking the «tail» I realized that they normally face the other way, and was about to change them to conform with traditional UI components.",
+    "par3": "But then I thought, WHY? This is my website, and this is one of my quirks. I’m all for not changing what works and am aware of the dangers from getting creative with things people expect to work and certain way. BUT, if I can't get away with displaying a few personal quirks on my own website, then where?"
+  },
+  "DisciplineSummaryBox": {
+    "button": "See projects"
+  },
+  "Contact": {
+    "heading": "Any questions? Just ask!",
+    "button": "Send",
+    "hint1": "By pressing",
+    "hint2": "you agree to having your email address saved in our systems",
+    "inputNames": {
+      "name": "name",
+      "email": "email",
+      "message": "message"
+    },
+    "inputLabels": {
+      "name": "Name please",
+      "email": "And email address",
+      "message": "Your message"
+    }
+  },
+  "Footer": "Designed and developed by Sarah Svedenborg"
+}

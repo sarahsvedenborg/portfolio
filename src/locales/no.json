@@ -1,0 +1,69 @@
+{
+  "Home": {
+    "name": "Sarah",
+    "title": "UX utvikler",
+    "sub1": "Kobler",
+    "sub2": "design",
+    "sub3": "og",
+    "sub4": "utvikling",
+    "scrollDown": "Scroll ned",
+    "subTitle1": "UX designer",
+    "subTitle2": "Utvikler",
+    "subTitle3": "UX utvikler",
+    "section1": {
+      "par1": "Jeg har en master i interaksjonsdesign fra NTNU hvor jeg fordypet meg i hvordan man kan innvolvere barn i desingproseseser for produkter titenkt deres egen målgruppe.",
+      "par2": "Innvolvering av brukere i designprosesser er det som virkelig skaper NYTTIG teknologi. Det er utrolig hvor mye spennedne innsikt man får gjennom å samhandle med brukere enten gjennom invervjuer, fokusgrupper, brukertesting osv. Dette er aktiviteter jeg triver med å organisere og ikke minst gjennomføre.",
+      "par3": "for så i ettertid å kunne analysere innsikten, utarbeide mulige løsningsforslag og se et produkt ta form gir meg stor glede."
+    },
+    "section2": {
+      "par1": "Én ting er å kunne 'finne' på en god idé. En annen ting er å kunne skape den. Lenge var det magisk for meg hvordan nettsider ble laget og søken etter å kunne lage noe slik selv resulterte i en master i informatikk. Selv om jeg har backenderfaring, har frontend virkelig blitt det området hvor jeg trives hvor ma kan se idéene bli levende.",
+      "par2": "",
+      "par3": ""
+    },
+    "section3": {
+      "par1": "Med bakgrun i både informatikk og interaksjonsdesing er dere vanskelig å bare velge ett fagfelt å fokusere på når begge er så spennende og utfyller hverande. De lar meg utøve helt forskjellige ferdigheter og arbeidsmetoder. Ønker jeg å jobbe alene og skikkelig fokusere, ja da tar jeg frem tastaturet og taster i vei? vil jeg være sosial, brainstoreme, være i en interaktiv prosess med andre, ja da er UX fantasktisk. Vkl jeg fokusere op detaljer, optimaliseringern ++ , tilbake itl tastaturet. Vil jeg være kreativ, fokusere oå former og farger, jobbe visuelt? tilbake til brukerene og samarbeid med andre designere. Det å kunne switche mellom disse disiplinene og virkelig se styrkene i begge, og veklse mellom hatter, er det jeg tenker er en UX utvikelr. En som virkelig jobbe ri skillet mellom desing og utvikler, og der ser jeg meg selv.",
+      "par2": "",
+      "par3": ""
+    }
+  },
+  "NavBar": {
+    "projects": "Prosjekter",
+    "about": "Om meg",
+    "contact": "Ta kontakt"
+  },
+  "Projects": {
+    "heading": "Prosjekter",
+    "strangeCheckmarks": "Hva er greia med disse hakene?",
+    "dev": "Front-end",
+    "ux": "UX"
+  },
+  "About": {
+    "heading": "Om meg"
+  },
+  "FunFact": {
+    "heading": "Fun Fact",
+    "par1": "\"Men hakene i disse avkryssningsboksene går jo feil vei\", sier du? Nei, det gjør de ikke. Som venstrehendt har jeg alltid huket at bokser slik. Det tok meg mange år før jeg innså at 'vanlige' folk skriver hakene sine den andre veien.",
+    "par2": "Da jeg designet hakene til denne nettsiden var det helt naturlig for meg å lage haker som gikk mot venstre (siden det jo er sånn jeg ser dem i min egen håndskrift). Det var bare da jeg drev og finjusterte 'halene' at jeg kom på at at slike haker vanligvis går den andre veien. Jeg var i ferd med å endre dem for å tilpasse meg tradisjonelle UI komponenter.",
+    "par3": "Men så tenkte jeg, HVORFOR det? Dette er min nettside og dette er en av mine skavanker. Jeg gir vanligvis min fulle støtte til å ikke endre ting som virker, og jeg er fullt klar over farene ved å bli for kreativ med ting folk forventer at skal fungere på en viss måte. MEN, hvis jeg ikke kan tillate meg å vise frem noen særegne trekk på min egen nettside, hvor er det da mulig?"
+  },
+  "DisciplineSummaryBox":{
+    "button":"Se prosjekter"
+  },
+  "Contact": {
+    "heading": "Lurer du på noe? Bare spør!",
+    "button": "Send",
+    "hint1": "Ved å trykke",
+    "hint2": "samtykker du til at epost-adressen din lagres i våre systemer",
+    "inputNames": {
+      "name": "name",
+      "email": "email",
+      "message": "message"
+    },
+    "inputLabels": {
+      "name": "Navnet ditt",
+      "email": "Eposten din",
+      "message": "Beskjed"
+    }
+  },
+  "Footer": "Designet og utviklet av Sarah Svedenborg"
+}

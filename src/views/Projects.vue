@@ -1,78 +1,88 @@
 <template>
-    <div>
-        <NavBar />
-        <div class="row">
-            <div class="col">
-            <h1>Projects</h1>
-            </div>
-            <div class="col">
-            <p>Checkboxes for filtering projects</p>
-            </div>
-        </div>
-        <div class="row">
-       <ProjectSummaryCard v-for="(project,i) in projects" :key="project.name" :project="project" :index="i"/>
+  <div>
+    <NavBar />
+    <div class="row">
+      <div class="col">
+        <h1 class="title title-large color-accent">{{$t("Projects.heading")}}</h1>
+        <Checkbox
+          id="inputUX"
+          :val="$t('Projects.ux')"
+          :checkedByDefault="selectedCategories['UX']"
+          :changed="(e) => selectedCategories['UX'] = e.target.checked"
+        />
+        <Checkbox
+          id="inputFronted"
+          :val="$t('Projects.dev')"
+          :checkedByDefault="selectedCategories['Front-end']"
+          :changed="(e) => selectedCategories['Front-end'] = e.target.checked"
+        />
+        <p class="teaser" @click="() => displayModal = true">{{$t('Projects.strangeCheckmarks')}}</p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col lg-8">
+        <ProjectSummaryCard
+          v-for="(project,i) in projects"
+          :key="project.name"
+          :project="project"
+          :index="i"
+          :selectedCategory="isSelectedCategory(project.discipline)"
+        />
+      </div>
     </div>
+    <Modal v-if="displayModal" :closeModal="() => displayModal = false" />
+  </div>
 </template>
 
 <script>
-import NavBar from '@/components/shared/NavBar'
-import ProjectSummaryCard from '@/components/ProjectSummaryCard'
+import Checkbox from "@/components/shared/UI/Checkbox";
+import Modal from "@/components/shared/UI/Modal";
+import NavBar from "@/components/shared/NavBar";
+import ProjectSummaryCard from "@/components/ProjectSummaryCard";
+import { projects } from "@/projects.js";
 export default {
-    components: {NavBar, ProjectSummaryCard},
-    data(){
-        return {
-            projects: [
-                {
-                    name: 'ForBarna.no',
-                    technology: '@/assets/Vue.svg',
-                    summary: 'ForBarna.no er ett nettsted for barn i småskolen soms inneholder diverse spill for læring. Prosjektet er laget i vue og designet er laget selv. Firebase er brukt som backed og funksjonaliteten er brukertestet.',
-                    discipline: 'UX|Dev|Both' 
-                },
-                {
-                    name: 'BeautyBoard',
-                    technology: 'React',
-                    summary: 'Dette er en trello lignende app som ... ',
-                    discipline: 'UX|Dev|Both' 
-                },
-                {
-                    name: 'Portfolio',
-                    technology: 'Vue',
-                    summary: 'Denne portfolio-siden er laget av meg selv ... ',
-                    discipline: 'UX|Dev|Both' 
-                },
-                 {
-                    name: 'BurgerBuilder',
-                    technology: 'React',
-                    summary: 'Denne portfolio-siden er laget av meg selv ... ',
-                    discipline: 'UX|Dev|Both' 
-                },
-                 {
-                    name: 'Timeline',
-                    technology: 'Vue',
-                    summary: 'Denne portfolio-siden er laget av meg selv ... ',
-                    discipline: 'UX|Dev|Both' 
-                },
-                 {
-                    name: 'Engelske farger',
-                    technology: 'Phaser',
-                    summary: 'Her kan man lære fargene på engelsk og øve på dem ',
-                    discipline: 'UX|Dev|Both' 
-                },
-                 {
-                    name: 'BurgerBuilder redesign',
-                    technology: 'React',
-                    summary: 'Designet og brukeropplevelsen ble endret i dette prosjektet ',
-                    discipline: 'UX' 
-                }
-            ]
+  created() {
+    window.scrollTo(0, 0);
+  },
+  components: { NavBar, ProjectSummaryCard, Checkbox, Modal },
+  props: {
+    preSelectedCategories: {
+      type: Object,
+    },
+  },
+  data() {
+    return {
+      projects: Object.keys(projects).map((itemName) => {
+        let project = projects[itemName];
+        project["projectURL"] = itemName;
+        return project;
+      }),
+      selectedCategories: this.preSelectedCategories,
+      displayModal: false,
+    };
+  },
+  methods: {
+    isSelectedCategory(tagList) {
+      let selectedCategoriesAsList = Object.keys(this.selectedCategories).map(
+        (itemName) => {
+          return this.selectedCategories[itemName] ? itemName : null;
         }
-    }
-}
+      );
+      for (let i = 0; i < tagList.length; i++) {
+        if (selectedCategoriesAsList.includes(tagList[i])) {
+          return true;
+        }
+      }
+      return false;
+    },
+  },
+};
 </script>
 
 <style scoped>
-h1{
-    color: var(--color-accent)
+.teaser {
+  font-size: small;
+  margin-bottom: 0px;
+  cursor: pointer;
 }
 </style>

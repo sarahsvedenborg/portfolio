@@ -21,18 +21,43 @@ const routes = [
   {
     path: '/contact',
     name: 'Contakt',
-    component: () => import( '../views/Contact.vue')
+    component: () => import('../views/Contact.vue')
   },
   {
     path: '/gridtest',
     name: 'GridTest',
-    component: () => import( '../views/GridTest.vue')
+    component: () => import('../views/GridTest.vue')
   },
   {
-    path: '/projects',
-    name: 'Projects',
-    component: () => import( '../views/Projects.vue')
+    path: '/project/:projectName',
+    name: 'Project',
+    component: () => import('../views/Project.vue'),
+    props: true
   },
+  {
+    path: '/projects/all',
+    name: 'Projects',
+    component: () => import('../views/Projects.vue'),
+    props: { preSelectedCategories: { "Front-end": true, "UX": true } }
+  },
+  {
+    path: '/projects/development',
+    name: 'Projects',
+    component: () => import('../views/Projects.vue'),
+    props: { preSelectedCategories: { "Front-end": true, "UX": false } }
+  },
+  {
+    path: '/projects/design',
+    name: 'Projects',
+    component: () => import('../views/Projects.vue'),
+    props: { preSelectedCategories: { "Front-end": false, "UX": true } }
+  },
+  {
+    path: '/*',
+    name: 'Not found',
+    component: () => import('../views/NotFound.vue')
+  },
+
 
 ]
 

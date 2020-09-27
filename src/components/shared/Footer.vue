@@ -1,7 +1,7 @@
 <template>
   <div class="row footer">
     <div class="col">
-      <span>Designed and developed by Sarah Svedenborg</span>
+      <span>{{$t("Footer")}}</span>
     </div>
   </div>
 </template>
@@ -17,5 +17,8 @@ export default {};
 }
 span {
   color: white;
+      font-family: "Trirong", serif;
+      letter-spacing: 2px;
+      font-weight: bold;
 }
 </style>

@@ -1,21 +1,21 @@
 <template>
   <div class="disciplineSummaryBox">
-    <h2>{{heading}}</h2>
-    <p>{{body}}</p>
-    <button>Read more</button>
+    <h2 class="title title-medium color-accent">{{heading}}</h2>
+    <slot />
+    <router-link :to="linkTo"><button>{{$t("DisciplineSummaryBox.button")}}</button></router-link>
   </div>
 </template>
 
 <script>
 export default {
-    props:{
-        heading:{
-            type: String
-        },
-        body:{
-            type: String
-        }
+  props: {
+    heading: {
+      type: String,
+    },
+    linkTo: {
+      type: String
     }
+  },
 };
 </script>
 
@@ -25,23 +25,19 @@ export default {
   margin: 2em 0em;
 }
 
-h2 {
-  color: var(--color-accent);
-}
-
 p {
-  color: black;
+  color: var(--color-dark);
 }
 
 button {
   border: 1px solid var(--color-accent);
-  background-color: white;
+  background-color: var(--color-light);
   border-radius: 39px;
   height: 3.5em;
   width: 125px;
   color: var(--color-accent);
   margin: 1em;
-  font-family: "Trirong", serif;
   font-weight: bold;
+  cursor: pointer;
 }
 </style>

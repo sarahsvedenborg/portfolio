@@ -1,24 +1,26 @@
 <template>
-  <div class="col lg-10">
+  <div class="col" v-if="selectedCategory">
     <div class="card">
       <div class="image" :class="index % 2 == 0 ? 'infoRight' : 'infoLeft'">
-        <img alt="screenshot of website" src="@/assets/forBarnaThumbnail.png" />
+        <img alt="screenshot of website" :src="require('@/assets/screenshots/' + project.screenshots[0])" />
       </div>
       <div class="info" :class="index % 2 == 0 ? 'infoRight' : 'infoLeft'">
-        <img class="logo" src="@/assets/Vue.svg" width="50px" />
-        <h4 class="heading">{{project.name}}</h4>
+        <img class="logo" src="@/assets/Vue.svg" width="30px" />
+        <h3 class="subtitle title-small">{{project.name}}</h3>
+        <div class="tagArea">
+          <Tag v-for="(tag,i) in project.discipline" :key="i" :tagType="tag" />
+        </div>
         <p>{{project.summary}}</p>
-        <router-link to="/projects">Se mer</router-link>
+        <router-link :to="'/project/'+ project.projectURL">Se mer</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Tag from "@/components/shared/Tag";
 export default {
-    created(){
-        console.log("icon", this.project.technology)
-    },
+  components: { Tag },
   props: {
     project: {
       type: Object,
@@ -26,13 +28,17 @@ export default {
     index: {
       type: Number,
     },
-  },
+    selectedCategory: {
+      type: Boolean
+    }
+   
+  }
 };
 </script>
 
 <style scoped>
 .card {
-  margin-bottom: 20px;
+  margin: 5vh 0px;
   border: 1px solid black;
 }
 
@@ -69,5 +75,31 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.tagArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+   .image{
+     display: none;
+   }
+ }
+
+ @media (max-width: 576px) {
+   .info{
+     width: 80%;
+   }
+ }
 </style>
