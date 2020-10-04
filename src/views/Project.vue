@@ -4,20 +4,20 @@
     <div class="row">
       <div class="col lg-8">
         <h1 class="title title-large color-accent">{{project.name}}</h1>
-        <ProjectSection heading="The problem">
+        <ProjectSection :heading="$t('Project.problem')">
           <div class="problem">
             <p>{{project.problem}}</p>
-            <p>Målgruppe: {{project.demography}}</p>
+            <p>{{$t('Project.demography')}}: {{project.demography}}</p>
           </div>
         </ProjectSection>
-        <ProjectSection heading="The solution">
+        <ProjectSection :heading="$t('Project.solution')">
           <p>
-            Se koden
-            <a :href="project.gitHubURL" target="_blank">her</a>
+            {{$t('Project.seeCode')}}
+            <a :href="project.gitHubURL" target="_blank">{{$t('Project.here')}}</a>
           </p>
           <p>
-            Se siden
-            <a :href="project.siteURL" target="_blank">her</a>
+             {{$t('Project.seeSite')}}
+            <a :href="project.siteURL" target="_blank">{{$t('Project.here')}}</a>
           </p>
           <div class="images">
             <img
@@ -27,23 +27,24 @@
             />
           </div>
         </ProjectSection>
-        <ProjectSection heading="Teknologier">
-          <ul>
-            <li>Rammeverk: Vue.js</li>
-            <li>Backend: Firebase</li>
-            <li>Hosting: Netlify</li>
-            <li>Version control: Git</li>
-            <li>Project planning: Trello</li>
+        <ProjectSection :heading="$t('Project.technology')">
+          <ul class="technologies">
+            <li v-for="technology in project.technology" :key="technology[0]">{{technology[0]}}: {{technology[1]}}</li>
           </ul>
         </ProjectSection>
-        <ProjectSection heading="Lærdom">
+        <ProjectSection :heading="$t('Project.lessons')">
           <p>
-            Prosjeket er laget som en del av et React-kurs på
-            <a href="www.udemy.com">udemy.com</a> med Maximillian Swartzmüller
+            {{project.lessons}}
           </p>
         </ProjectSection>
-        <ProjectSection heading="Annet">
-          <p>Prosjeket er laget som en del av et React-kurs på udemy.com med Maximillian Swartzmüller</p>
+        <ProjectSection :heading="$t('Project.other')" v-if="project.other">
+          <p>{{project.other}}</p>
+        </ProjectSection>
+           <ProjectSection :heading="$t('Project.acknowledgements')" v-if="project.acknowledgements.length > 0">
+           <h4 class="subtitle">{{$t('Project.acknowledgementsSub')}} </h4>
+           <p v-for="(item,i) in project.acknowledgements" :key="i">
+             {{item.what}}: <a :href="item.source" target="_blank">{{item.source}}</a>
+           </p>
         </ProjectSection>
       </div>
     </div>
@@ -53,7 +54,8 @@
 <script>
 import NavBar from "@/components/shared/NavBar";
 import ProjectSection from "@/components/hoc/ProjectSection";
-import { projects } from "@/projects.js";
+import { projectsNO } from "@/projectsNO.js";
+import { projectsENG } from "@/projectsENG.js";
 export default {
   created() {
     window.scrollTo(0, 0);
@@ -66,7 +68,7 @@ export default {
   },
   data() {
     return {
-      project: projects[this.projectName],
+      project: this.$root.$i18n.locale == 'en' ? projectsENG[this.projectName] : projectsNO[this.projectName],
     };
   },
 };
@@ -95,13 +97,37 @@ a {
 }
 
 .images img {
-  width: 25%;
+  width: 60%;
+  margin: 5px 0px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .images {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ @media (min-width: 768px) {
+   .images img{
+     width: 25%;
+     margin: 0px;
+   }
+   .images {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+ }
+
+.technologies{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.technologies li {
+  padding: 5px;
 }
 </style>

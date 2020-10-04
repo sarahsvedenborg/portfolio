@@ -1,9 +1,13 @@
 <template>
   <div class="topBar">
-    <router-link to="/gridtest">Test grid</router-link>
-        <div>
-      <a href="https://github.com/sarahsvedenborg/" target="blank"><TopBarIcon altText="GitHub logo" source="GitHub-Mark-Light-64px.png" /></a>
-      <a href="https://www.linkedin.com/in/sarahsvedenborg/" target="blank"><TopBarIcon altText="LinkedIn logo" source="In-White-40.png" /></a>
+    <!--  <router-link to="/gridtest">Test grid</router-link> -->
+    <div>
+      <a href="https://github.com/sarahsvedenborg/" target="blank">
+        <TopBarIcon altText="GitHub logo" source="GitHub-Mark-Light-64px.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/sarahsvedenborg/" target="blank">
+        <TopBarIcon altText="LinkedIn logo" source="In-White-40.png" />
+      </a>
     </div>
     <div class="languages">
       <TopBarIcon
@@ -31,7 +35,6 @@
         altText="England"
       />
     </div>
-
   </div>
 </template>
 
@@ -46,10 +49,17 @@ export default {
 <style scoped>
 .topBar {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   color: var(--color-light);
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .topBar {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
 
 .languages img {
@@ -58,5 +68,5 @@ export default {
 
 .languages {
   margin: 0px 10px;
-} 
+}
 </style>

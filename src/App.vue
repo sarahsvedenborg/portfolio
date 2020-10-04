@@ -21,15 +21,6 @@ export default {
   --color-light: white;
   --color-dark: black;
 }
-/*used ofr setting gutters on custom responsive grid*/
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 
 body {
   margin: 0px;
@@ -79,5 +70,8 @@ body {
 /*Margins*/
 .margin-bottom-none{
     margin-bottom: 0px;
+}
+.margin-top-none{
+    margin-top: 0px;
 }
 </style>

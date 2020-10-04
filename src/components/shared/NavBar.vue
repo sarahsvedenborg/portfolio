@@ -1,55 +1,38 @@
 <template>
-  <div class="navBar" :class="{fixed: stop}" :style="{'opacity': opacity}" ref="navBar">
-    <div class="logo">
-      <router-link to="/">
-        <img alt="homeLogo" src="../../assets/LinksThumbnail.svg" width="40px" />
-      </router-link>
+  <div class="navBarContainer">
+    <div class="navBar" :style="{'opacity': opacity}" ref="navBar">
+      <TopBarIcon
+        source="LinksThumbnail.svg"
+        :action="() => $router.push('/')"
+        altText="Home button"
+      />
+      <MenuItems v-if="!isMobile" />
+      <TopBarIcon
+        v-if="isMobile && !menuOpen"
+        source="icons/HamburgerMenu.svg"
+        :action="() => menuOpen = true"
+        altText="menu icon"
+      />
+      <TopBarIcon
+        v-if="menuOpen"
+        source="icons/Exit.svg"
+        :action="() => menuOpen = false"
+        altText="close icon"
+      />
     </div>
-    <ul>
-      <li>
-        <router-link to="/Projects/all">{{$t('NavBar.projects')}}</router-link>
-      </li>
-      <li>
-        <router-link to="/About">{{$t('NavBar.about')}}</router-link>
-      </li>
-      <li>
-        <router-link to="/Contact">{{$t('NavBar.contact')}}</router-link>
-      </li>
-      <li>
-        <div class="languages">
-          <TopBarIcon
-            v-if="$root.$i18n.locale == 'no'"
-            source="NorwayAccent.svg"
-            :action="() => $root.$i18n.locale = 'no'"
-            altText="Norway"
-          />
-          <TopBarIcon
-            v-else
-            source="NorwayWhite.svg"
-            :action="() => $root.$i18n.locale = 'no'"
-            altText="Norway"
-          />
-          <TopBarIcon
-            v-if="$root.$i18n.locale == 'en'"
-            source="UKaccent.svg"
-            :action="() => $root.$i18n.locale = 'en'"
-            altText="England"
-          />
-          <TopBarIcon
-            v-else
-            source="UKwhite.svg"
-            :action="() => $root.$i18n.locale = 'en'"
-            altText="England"
-          />
-        </div>
-      </li>
-    </ul>
+    <StopAtTop :distanceToTop="{initial: navBarHeight, final: navBarHeight}" :scrollY="scrollY" v-if="menuOpen" absolutePos :width="120" bringToFront>
+      <MobileMenu />
+    </StopAtTop>
   </div>
 </template>
 <script>
+import MenuItems from "@/components/shared/MenuItems";
 import TopBarIcon from "@/components/shared/TopBarIcon";
+import MobileMenu from "@/components/shared/MobileMenu";
+import StopAtTop from "@/components/hoc/StopAtTop";
+import { isMobile } from "@/utils.js";
 export default {
-  components: { TopBarIcon },
+  components: { TopBarIcon, MenuItems, MobileMenu, StopAtTop },
   props: {
     fadable: {
       type: Boolean,
@@ -63,19 +46,33 @@ export default {
   },
   data() {
     return {
-      stop: false,
+      //stop: false,
+      isMobile: isMobile(),
+      menuOpen: false,
+      //scrollThreshold: null,
     };
   },
-  watch: {
+  computed: {
+    navBarHeight() {
+      return this.$refs.navBar.getBoundingClientRect().height;
+    },
+  },
+/*   watch: {
     scrollY() {
       if (this.$refs.navBar.getBoundingClientRect().top < 0) {
         this.stop = true;
+        this.scrollThreshold = this.scrollY;
+      } else if (this.scrollThreshold && this.scrollY < this.scrollThreshold) {
+        this.stop = false;
       }
     },
-  },
+  }, */
 };
 </script>
 <style scoped>
+.navBarContainer {
+  position: relative;
+}
 .navBar {
   display: flex;
   flex-direction: row;
@@ -83,40 +80,13 @@ export default {
   background-color: var(--color-dark);
   color: var(--color-light);
   width: 100%;
+  z-index: 8;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   top: 0;
-}
-.logo {
-  padding: 5px 0px 5px 10px;
-}
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  margin: 0px;
-}
-li a {
-  text-transform: uppercase;
-  color: var(--color-light);
-  padding: 10px;
-  text-decoration: none;
-  font-size: small;
-}
-
-li a:hover {
-  color: var(--color-accent);
-}
-
-.languages img {
-  margin: 0px;
-}
-
-.languages {
-  margin: 0px 10px;
+} */
+.hamburgerIcon {
+  margin-right: 10px;
 }
 </style>

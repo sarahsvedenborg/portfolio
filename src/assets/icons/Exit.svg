@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Exit</title>
+    <g id="Exit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group" transform="translate(2.000000, 2.000000)" stroke="#FFFFFF" stroke-width="2">
+            <line x1="0.5" y1="0.5" x2="16.5" y2="15.5" id="Line-5"></line>
+            <line x1="0.74596879" y1="15.7540312" x2="16.2540312" y2="0.24596879" id="Line-5"></line>
+        </g>
+    </g>
+</svg>

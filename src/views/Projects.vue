@@ -20,13 +20,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col lg-8">
+      <div class="col col-11 lg-8">
         <ProjectSummaryCard
           v-for="(project,i) in projects"
           :key="project.name"
           :project="project"
           :index="i"
           :selectedCategory="isSelectedCategory(project.discipline)"
+          :isMobile="isMobile"
         />
       </div>
     </div>
@@ -39,7 +40,9 @@ import Checkbox from "@/components/shared/UI/Checkbox";
 import Modal from "@/components/shared/UI/Modal";
 import NavBar from "@/components/shared/NavBar";
 import ProjectSummaryCard from "@/components/ProjectSummaryCard";
-import { projects } from "@/projects.js";
+import { projectsENG } from "@/projectsENG.js";
+import { projectsNO } from "@/projectsNO.js";
+import { isMobile } from "@/utils.js";
 export default {
   created() {
     window.scrollTo(0, 0);
@@ -52,13 +55,10 @@ export default {
   },
   data() {
     return {
-      projects: Object.keys(projects).map((itemName) => {
-        let project = projects[itemName];
-        project["projectURL"] = itemName;
-        return project;
-      }),
+      projects: this.initializeProjects(),
       selectedCategories: this.preSelectedCategories,
       displayModal: false,
+      isMobile: isMobile()
     };
   },
   methods: {
@@ -75,6 +75,15 @@ export default {
       }
       return false;
     },
+    initializeProjects() {
+      const localizedProjects = this.$root.$i18n.locale == 'en' ? projectsENG : projectsNO
+      let projects = Object.keys(localizedProjects).map((itemName) => {
+        let project = localizedProjects[itemName];
+        project["projectURL"] = itemName;
+        return project;
+      })
+      return projects
+    }
   },
 };
 </script>
@@ -84,5 +93,7 @@ export default {
   font-size: small;
   margin-bottom: 0px;
   cursor: pointer;
+  text-decoration: underline;
+    text-decoration-color: var(--color-accent);
 }
 </style>

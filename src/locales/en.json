@@ -11,19 +11,18 @@
     "subTitle2": "Developer",
     "subTitle3": "UX Engineer",
     "section1": {
-      "par1": "TODO Paragraph 1",
-      "par2": "TODO Paragraph 2",
-      "par3": "TODO Paragraph 3"
+      "par1": "USEFUL technology is created when users partake in the design process. By interacting with users through interviews, workshops and usability tests, there is no end to the useful insight which can be obtained. These are activities I thoroughly enjoy planning, and especially facilitating. ",
+      "par2": "Moreover, I take just as great a pleasure in analyzing the results aftermath, proposing possible solutions and seeing a new product realized."
     },
     "section2": {
-      "par1": "TODO Paragraph 1",
-      "par2": "TODO Paragraph 2",
-      "par3": "TODO Paragraph 3"
+      "par1": "It is one thing to design great solutions, it is another to be able to build them. For a long time, it seemed like magic how websites were created. My search for understanding how websites are built resulted in a graduate degree in computer science.",
+      "par2": "Although I have backend experience, frontend it really where I feel at home. It is the area where ideas come alive."
     },
     "section3": {
-      "par1": "TODO Paragraph 1",
-      "par2": "TODO Paragraph 2",
-      "par3": "TODO Paragraph 3"
+      "par1": "Coming from a combined background of both development and design, it is difficult to choose just one area to focus on. Both disciplines allow me to exercise completely different skills and work processes.",
+      "par2": "If I want to work alone and really focus, bring out with the keyboard! If I want cooperation, brainstorming and interactive processes? UX is amazing.",
+      "par3": "If I want to get down to the nitty gritty with implementation details? Back to the keyboard. If I, however, feel like working more visually and creatively? Back to the users and other designers.",
+      "par4": "Switching between these disciplines and valuing the strength of both, is what I believe constitutes a UX engineer. It is someone who really works in the intersection between design and development, and it is were I see myself."
     }
   },
   "NavBar": {
@@ -31,14 +30,96 @@
     "about": "About",
     "contact": "Contact"
   },
+  "ProjectSummaryCard": {
+    "button": "See more"
+  },
   "Projects": {
     "heading": "Projects",
     "strangeCheckmarks": "What's up with these checkmarks?",
     "dev": "Front-end",
     "ux": "UX"
   },
+  "Project": {
+    "demography": "Demography",
+    "problem": "The problem",
+    "solution": "The solution",
+    "technology": "Technology",
+    "lessons": "Lessons",
+    "other": "Other",
+    "acknowledgements": "Acknowledgements",
+    "acknowledgementsSub": "The following are tutorials, insiprational sites or frameworks I have used for this project.",
+    "seeCode": "View the code",
+    "seeSite": "View the site",
+    "here": "here"
+  },
   "About": {
-    "heading": "About me"
+    "heading": "About me",
+    "personal": "Personal",
+    "education": "Education",
+    "skills": "Skills",
+    "menuItems": [
+      {
+        "name":"Personal",
+        "ref": "personalRef"
+      },
+      {
+        "name": "Education",
+        "ref": "educationRef"
+      },
+      {
+        "name": "Skills",
+        "ref": "skillsRef"
+      }
+    ],
+    "section1": {
+      "par1": "Hello! My name is Sarah Svedenborg and I have an interdisciplinary approach to life. My interests range from languages to teaching to Norwegian national costume embroidery to sewing til programming. I am a creative person and programming is yet another area in which I can exercise my creativity. As oppsosed to making clothes, the practical thing about coding projects is that they do not demand space in a cupboard.",
+      "par2": "I am happy when I can alter between working alone and collaborating with others, and am passionate about the human aspect of IT. I would label myself as a UX engineer as I have great interst, and education, in both UX and software developemnt. Even within the field of computer science, I have an interdisciplinary approach.",
+      "par3": "Besides obtaining 10 years of higher education in recent years (langues, developemnt studies, mathematics, computer scinence, and UX) and numerous hobbies, I have been blessed with 4 children.",
+      "par4": "Naturally, this affects my daily life and I value family greatly. I am very interested in areas related to children, and the combination of teaching and programming ... mbinasjon jeg er veldig interessert i og ... a teaching degre is the only education I have begun which I have yet to complete."
+    },
+    "educationList": [
+      {
+        "heading": "Formal",
+        "items": [
+          "Graduate degree in Informatics, NTNU (Norway)",
+          "One year course in Mathematics, NTNU (Norway)",
+          "One year course in English, NTNU (Norway)",
+          "Undergraduate degree in Korean and Development Studies, SOAS (London)",
+          "15 credits in Latin (I mention it because it is one of the absolute coolest subjects I have ever taken! - Sapere aude -"
+        ]
+      },
+      {
+        "heading": "Courses",
+        "items": [
+          "React - The Complete Guide, udemy.com",
+          "Vue - The Complete Guide, udemy.com",
+          "Sketch from A-Z, udemy.com",
+          "Developing an Information Architecture with Card Sorting, udemy.com",
+          "Demystifying Parallax, udemy.com",
+          "The Complete Cyber Security Course - Part 1, udemy.com",
+          "Phaser, Zenva Academy (online)"
+        ]
+      },
+      {
+        "heading": "Certifications",
+        "items": [
+          "70-480: Programming in HTML5 with JavaScript and CSS3, Microsoft",
+          "Oracle Certified Associate, Java SE 8 Programmer, Oracle",
+          "CPUX-F (Usability and User Experience), UXQB",
+          "AZ-900: Microsoft Azure Fundamentals, Microsoft"
+        ]
+      }
+    ],
+    "skillsList": [
+      {
+        "heading": "Tools",
+        "items": ["Sketch", "Optimal Workshop", "Balsamiq", "VS code", "Git"]
+      },
+      {
+        "heading": "Techniques/Processes",
+        "items": ["Usability testing", "Card sorting", "Tree testing", "Scrum"]
+      }
+    ]
   },
   "FunFact": {
     "heading": "Fun Fact",

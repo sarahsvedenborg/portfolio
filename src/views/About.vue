@@ -1,54 +1,53 @@
 <template>
   <div class="about">
-    <NavBar />
+    <NavBar ref="navBar" />
+    <StopAtTop
+      v-if="isMobile"
+      :distanceToTop="{'initial': 40, 'final': 0}"
+      :scrollY="scrollY"
+      absolutePos
+    >
+      <OnPageNav
+        :navItems="$t('About.menuItems')"
+        :action="(ref) => scrollToSection(ref)"
+        :itemInView="itemInView"
+        :isMobile="true"
+      />
+    </StopAtTop>
     <div class="row">
-      <h1 class="title title-large color-accent" ref="personalRef">Om meg</h1>
+      <h1 class="title title-large color-accent" ref="personalRef">{{$t('About.heading')}}</h1>
     </div>
     <div class="row">
-      <!--     <div class="col lg-2">
-        <img alt="profile picture" src="@/assets/Sarah.svg" />
-      </div>-->
-      <OnPageNav :navItems="navItems" :action="(ref) => scroll(ref)" :itemInView="itemInView" />
-      <div class="col lg-6">
-        <img alt="profile picture" src="@/assets/Sarah.svg" />
-        <p>
-          Hei! Jeg heter
-          <span class="accent">Sarah Svedenborg</span> og må være definisjonen av tverrfaglighet.
-          Interessene mine spriker fra språk til læring til bunadsbrodering til søm til programmering
-          (se sarahsurium.no for min mer lekne personlighet). Jeg er en kreativ person og programmering er
-          enda én arena hvor jeg kan bruke kreativiteten min. I motsetning til søm, er det praktiske med programmering at produktene
-          ikke tar opp skapplass.
-        </p>
-        <p>
-          Sarah er en jente som liker å programmere. Hun like rå lage ting og tang.
-          Søm er noe som hun elsker å drive med og brodere bunad gjør hun også.
-          I tillegg er frontend noie hun liker og UX har hun studert, Hun ølnsker
-          å jobbe med benne deler.
-          Altså være UX utvikler. Hun trives veldig me då lage ting for bar, og liker
-          skiller undervisning og koding.
-        </p>
-        <p>
-          Sarah er en jente som liker å programmere. Hun like rå lage ting og tang.
-          Søm er noe som hun elsker å drive med og brodere bunad gjør hun også.
-          I tillegg er frontend noie hun liker og UX har hun studert,
-          Hun ølnsker å jobbe med benne deler.
-          Altså være UX utvikler. Hun trives veldig me då lage ting for bar,
-          og liker skiller undervisning og koding.
-        </p>
-        <h2 class="title title-medium color-accent">Utdanning</h2>
-        <p>
-          Sarah er en jente som liker å programmere. Hun like rå lage ting og tang.
-          Søm er noe som hun elsker å drive med og brodere bunad gjør hun også.
-          I tillegg er frontend noie hun liker og UX har hun studert, Hun ølnsker å jobbe med
-          benne deler.
-          Altså være UX utvikler. Hun trives veldig me då lage ting for bar,
-          og liker skiller undervisning og koding.
-        </p>
+      <OnPageNav
+        v-if="!isMobile"
+        :navItems="$t('About.menuItems')"
+        :action="(ref) => scrollToSection(ref)"
+        :itemInView="itemInView"
+        :scrollY="scrollY"
+        :distanceToTop="40"
+        absolutePos
+      />
+      <div class="col col-11 lg-6">
+        <img alt="profile picture" src="@/assets/Sarah.svg" class="col col-4 lg-5" />
+        <p>{{$t('About.section1.par1')}}</p>
+        <p>{{$t('About.section1.par2')}}</p>
+        <p>{{$t('About.section1.par3')}}</p>
+        <p>{{$t('About.section1.par4')}}</p>
         <div ref="educationRef">
-          <AboutSection heading="Utdannelse" :lists="education" />
+          <AboutSection
+            :heading="$t('About.education')"
+            :lists="$t('About.educationList')"
+            :setThreshold="(threshold) => threshold1 = threshold"
+            listDivider="EducationDivider.svg"
+          />
         </div>
-        <div ref="skillsRef" horizontal>
-          <AboutSection heading="Ferdigheter" :lists="skills" />
+        <div ref="skillsRef">
+          <AboutSection
+            :heading="$t('About.skills')"
+            :lists="$t('About.skillsList')"
+            :setThreshold="(threshold) => threshold2 = threshold"
+            listDivider="SkillsDivider.svg"
+          ></AboutSection>
         </div>
       </div>
     </div>
@@ -57,85 +56,51 @@
 
 <script>
 import NavBar from "@/components/shared/NavBar";
+//import Table from "@/components/shared/UI/Table";
 import AboutSection from "@/components/AboutSection";
 import OnPageNav from "@/components/shared/OnPageNav";
+import StopAtTop from "@/components/hoc/StopAtTop";
+import { isMobile } from "@/utils.js";
+
 export default {
-  components: { NavBar, AboutSection, OnPageNav },
+  components: { NavBar, AboutSection, OnPageNav, StopAtTop },
   created() {
     window.scrollTo(0, 0);
+    window.addEventListener("scroll", this.handleScroll);
   },
   data() {
     return {
-      education: [
-        {
-          heading: "Formell",
-          items: [
-            "Master informatikk, NTNU",
-            "Årsstudium matematikk, NTNU",
-            "Årsstudium engelsk, NTNU",
-            "Bachelor i koreansk og utviklingsstudier, SOAS (London)",
-            "15sp i Latin (jeg nevner det bare fordi jeg synes det er utrolig kult å ha studert Latin. I tillegg er det ett av de desidert morsomte fagene jeg noen gang har tatt!)",
-          ],
-        },
-        {
-          heading: "Kurs",
-          items: [
-            "React, udemy",
-            "Vue, udemy",
-            "App design in Sketch, udemy",
-            "Phaser, Zenva",
-          ],
-        },
-        {
-          heading: "Sertifiseringer",
-          items: ["HTML/CSS/JS, Microsoft", "Java I, oracle", "UXQB"],
-        },
-      ],
-      skills: [
-        {
-          heading: "UX Tools",
-          items: ["Sketch", "Optimal Workshop", "Balsamiq"],
-        },
-        {
-          heading: "Front-end Tools",
-          items: ["VS code", "Git"],
-        },
-        {
-          heading: "UX Techniques",
-          items: ["User testing", "Card sorting", "Tree testing"],
-        },
-        {
-          heading: "Front-end Processes",
-          items: ["Scrum"],
-        },
-      ],
-      navItems: [
-        {
-          name: "Personlig",
-          ref: "personalRef",
-        },
-        {
-          name: "Utdannelse",
-          ref: "educationRef",
-        },
-        {
-          name: "Ferdigheter",
-          ref: "skillsRef",
-        },
-      ],
+      isMobile: isMobile(),
+      scrollY: 0,
+      threshold1: 1,
+      threshold2: 2,
+      screenHeight: window.innerHeight,
     };
   },
   computed: {
+    // TODO - how to generalize this function to take arbitrary number of sections
+    // How to use ref in translation files ans not hardcode refs everywhere...
     itemInView() {
-      return "personalRef"
+      const offset = this.screenHeight / 2;
+      if (this.scrollY >= 0 && this.scrollY + offset < this.threshold1) {
+        return "personalRef";
+      } else if (
+        this.scrollY + offset >= this.threshold1 &&
+        this.scrollY + offset < this.threshold2
+      ) {
+        return "educationRef";
+      } else return "skillsRef";
+    },
+    navBarHeight() {
+      return this.$refs.navBar.getBoundingClientRect().height;
     },
   },
   methods: {
-    scroll(ref) {
-      console.log("ref", ref);
-      console.log("refs", this.$refs);
-      console.log("element", this.$refs[ref]);
+    scrollToSection(ref) {
       this.$refs[ref].scrollIntoView();
+    },
+    handleScroll() {
+      this.scrollY = window.scrollY;
     },
   },
 };
@@ -159,8 +124,8 @@ p {
 }
 
 img {
-  width: 250px;
   float: left;
-  padding: 10px 40px 30px 0px;
+  /*   padding: 10px 40px 30px 0px; */
+  padding: 5%;
 }
 </style>

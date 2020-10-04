@@ -18,6 +18,12 @@ export default {
 
 <style scoped>
 .section{
-    margin-bottom: 10em;
+    margin: 4em 0em;
 }
+
+ @media (min-width: 768px) {
+     .section{
+         margin: 6em 0em;
+     }
+ }
 </style>

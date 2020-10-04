@@ -42,13 +42,13 @@ const routes = [
   },
   {
     path: '/projects/development',
-    name: 'Projects',
+    name: 'ProjectsDev',
     component: () => import('../views/Projects.vue'),
     props: { preSelectedCategories: { "Front-end": true, "UX": false } }
   },
   {
     path: '/projects/design',
-    name: 'Projects',
+    name: 'ProjectsDes',
     component: () => import('../views/Projects.vue'),
     props: { preSelectedCategories: { "Front-end": false, "UX": true } }
   },

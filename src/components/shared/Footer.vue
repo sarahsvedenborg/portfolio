@@ -20,5 +20,6 @@ span {
       font-family: "Trirong", serif;
       letter-spacing: 2px;
       font-weight: bold;
+      font-size: small;
 }
 </style>

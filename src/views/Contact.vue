@@ -2,7 +2,7 @@
   <div class="contact">
     <NavBar />
     <div class="row">
-      <div class="col lg-6">
+      <div class="col col-10 md-8 lg-6">
         <h2 class="title title-medium">{{$t("Contact.heading")}}</h2>
         <form
           name="contact"

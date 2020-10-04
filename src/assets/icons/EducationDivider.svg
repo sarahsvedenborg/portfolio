@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="33px" viewBox="0 0 148 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EducationDivider</title>
+    <g id="EducationDivider" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(27.000000, 2.000000)">
+            <rect id="Rectangle" fill="#2ECA77" x="0" y="0" width="94" height="16" rx="8"></rect>
+            <path d="M39,0 L57.2353191,0 C59.0784397,1.87760417 60,4.54427083 60,8 C60,11.4557292 59.0784397,14.1223958 57.2353191,16 L39,16 C40.628454,13.9671224 41.442681,11.3004557 41.442681,8 C41.442681,4.69954427 40.628454,2.0328776 39,0 Z" id="Rectangle" fill="#FFFFFF"></path>
+            <path d="M41,0 L55.761925,0 C57.253975,1.87760417 58,4.54427083 58,8 C58,11.4557292 57.253975,14.1223958 55.761925,16 L41,16 C42.3182723,13.9671224 42.9774084,11.3004557 42.9774084,8 C42.9774084,4.69954427 42.3182723,2.0328776 41,0 Z" id="Rectangle" fill="#2ECA77"></path>
+            <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" fill="#2ECA77" cx="6.5" cy="8" rx="5.5" ry="7"></ellipse>
+            <polygon id="Rectangle" fill="#2ECA77" points="41 18 57.7864757 18 62 29 51.5 22.3928833 45.0729027 29"></polygon>
+            <path d="M1,6.66295772 C1.68973234,5.42250191 2.92052786,4.71518824 4.51075769,5.10924163 C5.50549429,5.35573388 6.5205177,6.39814882 6.90100332,7.5 C7.15466039,8.23456745 6.92086241,9.06790079 6.19960936,10" id="Path-7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

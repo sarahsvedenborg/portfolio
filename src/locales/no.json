@@ -11,19 +11,18 @@
     "subTitle2": "Utvikler",
     "subTitle3": "UX utvikler",
     "section1": {
-      "par1": "Jeg har en master i interaksjonsdesign fra NTNU hvor jeg fordypet meg i hvordan man kan innvolvere barn i desingproseseser for produkter titenkt deres egen målgruppe.",
-      "par2": "Innvolvering av brukere i designprosesser er det som virkelig skaper NYTTIG teknologi. Det er utrolig hvor mye spennedne innsikt man får gjennom å samhandle med brukere enten gjennom invervjuer, fokusgrupper, brukertesting osv. Dette er aktiviteter jeg triver med å organisere og ikke minst gjennomføre.",
-      "par3": "for så i ettertid å kunne analysere innsikten, utarbeide mulige løsningsforslag og se et produkt ta form gir meg stor glede."
+      "par1": "Involvering av brukere i designprosesser er det som virkelig skaper NYTTIG teknologi. Det er utrolig hvor mye spennende innsikt man får ved å samhandle med brukere gjennom enten intervjuer, focusgrupper eller brukertesting. Dette er aktiviteter jeg trives med å organisere og ikke minst gjennomføre.",
+      "par2": "Videre gir det meg like stor glede å i ettertid analysere innsikten, utarbeide mulige løsningsforslag og se et produkt ta form."
     },
     "section2": {
-      "par1": "Én ting er å kunne 'finne' på en god idé. En annen ting er å kunne skape den. Lenge var det magisk for meg hvordan nettsider ble laget og søken etter å kunne lage noe slik selv resulterte i en master i informatikk. Selv om jeg har backenderfaring, har frontend virkelig blitt det området hvor jeg trives hvor ma kan se idéene bli levende.",
-      "par2": "",
-      "par3": ""
+      "par1": "Én ting er å designe en god idé. En annen ting er å kunne skape den. Lenge var det magisk for meg hvordan nettsider ble laget og søken etter å kunne lage noe slikt selv resulterte i en master i informatikk.",
+      "par2": "Selv om jeg har back-end erfaring, har front-end virkelig blitt det området hvor jeg trives: Området hvor man kan se idéene bli levende."
     },
     "section3": {
-      "par1": "Med bakgrun i både informatikk og interaksjonsdesing er dere vanskelig å bare velge ett fagfelt å fokusere på når begge er så spennende og utfyller hverande. De lar meg utøve helt forskjellige ferdigheter og arbeidsmetoder. Ønker jeg å jobbe alene og skikkelig fokusere, ja da tar jeg frem tastaturet og taster i vei? vil jeg være sosial, brainstoreme, være i en interaktiv prosess med andre, ja da er UX fantasktisk. Vkl jeg fokusere op detaljer, optimaliseringern ++ , tilbake itl tastaturet. Vil jeg være kreativ, fokusere oå former og farger, jobbe visuelt? tilbake til brukerene og samarbeid med andre designere. Det å kunne switche mellom disse disiplinene og virkelig se styrkene i begge, og veklse mellom hatter, er det jeg tenker er en UX utvikelr. En som virkelig jobbe ri skillet mellom desing og utvikler, og der ser jeg meg selv.",
-      "par2": "",
-      "par3": ""
+      "par1": "Med bakgrunn i både informatikk og interaksjonsdesign, er det vanskelig å velge bare ett fagfelt å fokusere på. De lar meg utøve helt forskjellige ferdigheter og arbeidsmetoder.",
+      "par2": "Ønsker jeg å jobbe alene og virkelig fokusere, ja da tar jeg frem tastaturet og taster i vei. Vil jeg være sosial, brainstorme, og være i en interaktiv prosess? Ja, da er UX fantastisk.",
+      "par3": "Vil jeg fokusere på detaljer og optimaliseringer? Tilbake til tastaturet. Vil jeg være kreativ, og jobbe visuelt? Tilbake til brukerne og samarbeid med andre designere.",
+      "par4": "Det å kunne switche mellom disse fagområdene og virkelig se styrkene i begge, er det jeg tenker en UX utvikler er. Det er en som jobber i skillet mellom design og  utvikling, og det er der jeg ser meg selv."
     }
   },
   "NavBar": {
@@ -31,23 +30,105 @@
     "about": "Om meg",
     "contact": "Ta kontakt"
   },
+  "ProjectSummaryCard": {
+    "button": "Se mer"
+  },
   "Projects": {
     "heading": "Prosjekter",
     "strangeCheckmarks": "Hva er greia med disse hakene?",
     "dev": "Front-end",
     "ux": "UX"
   },
+  "Project": {
+    "demography": "Målgruppe",
+    "problem": "Oppgaven",
+    "solution": "Løsningen",
+    "technology": "Teknologi",
+    "lessons": "Lærdom",
+    "other": "Annet",
+    "acknowledgements": "Anerkjennelser",
+    "acknowledgementsSub": "Dette er tutorialer, inspirasjonssider eller rammeverk jeg har benyttet.",
+    "seeCode": "Se koden",
+    "seeSite": "Se siden",
+    "here": "her"
+  },
   "About": {
-    "heading": "Om meg"
+    "heading": "Om meg",
+    "personal": "Personlig",
+    "education": "Utdannelse",
+    "skills": "Ferdigheter",
+    "menuItems": [
+      {
+        "name":"Personlig",
+        "ref": "personalRef"
+      },
+      {
+        "name": "Utdannelse",
+        "ref": "educationRef"
+      },
+      {
+        "name": "Ferdigheter",
+        "ref": "skillsRef"
+      }
+    ],
+    "section1": {
+      "par1": "Hei! Jeg heter Sarah Svedenborg og er tverrfaglig av natur. Interessene mine spriker fra språk til pedagogikk til bunadsbrodering til søm til programmering. Jeg er en kreativ person og programmering er enda én arena hvor jeg kan bruke kreativiteten min. I motsetning til søm, er det praktiske med programmering at produktene ikke tar opp skapplass.",
+      "par2": "Jeg veksler gjerne mellom å jobbe alene og å samarbeide med andre og er veldig opptatt av det menneskelige aspektet ved IT. Selv innenfor IT-fagfeltet er jeg tverrfaglig da jeg har stor interesse for, og utdanning, innen både UX og utvikling. Jeg identifiserer meg som UX utvikler hvis man skal bruke en tittel.",
+      "par3": "Ved siden av 10 års høyere utdanning (innenfor språk, utviklingsstudier, matematikk, informatikk, og UX) og et antall hobbyprosjekter, har jeg 4 barn.",
+      "par4": "Jeg er selvfølgelige preget av dette og setter familie høyt og er interessert i områder som er relatert til barn. Pedagogikk og programmering er en kombinasjon jeg er veldig interessert i og lærer er den eneste utdanningen jeg har begynt på som jeg ikke ennå har hatt mulighet til å fullføre."
+    },
+    "educationList": [
+      {
+        "heading": "Formell",
+        "items": [
+          "Master i informatikk, NTNU",
+          "Årsstudium matematikk, NTNU",
+          "Årsstudium engelsk, NTNU",
+          "Bachelor i koreansk og utviklingsstudier, SOAS (London)",
+          "15 sp i Latin (jeg nevner det fordi det er ett av de desidert morsomte fagene jeg noen gang har tatt! - Sapere aude -"
+        ]
+      },
+      {
+        "heading": "Kurs",
+        "items": [
+          "React - The Complete Guide, udemy.com",
+          "Vue - The Complete Guide, udemy.com",
+          "Sketch from A-Z, udemy.com",
+          "Developing an Information Architecture with Card Sorting, udemy.com",
+          "Demystifying Parallax, udemy.com",
+          "The Complete Cyber Security Course - Part 1, udemy.com",
+          "Phaser, Zenva Academy (online)"
+        ]
+      },
+      {
+        "heading": "Sertifiseringer",
+        "items": [
+          "70-480: Programming in HTML5 with JavaScript and CSS3, Microsoft",
+          "Oracle Certified Associate, Java SE 8 Programmer, Oracle",
+          "CPUX-F (Usability and User Experience), UXQB",
+          "AZ-900: Microsoft Azure Fundamentals, Microsoft"
+        ]
+      }
+    ],
+    "skillsList": [
+      {
+        "heading": "Verktøy",
+        "items": ["Sketch", "Optimal Workshop", "Balsamiq", "VS code", "Git"]
+      },
+      {
+        "heading": "Teknikker/Prosesser",
+        "items": ["Brukertesting", "Card sorting", "Tretesting", "Scrum"]
+      }
+    ]
   },
   "FunFact": {
     "heading": "Fun Fact",
-    "par1": "\"Men hakene i disse avkryssningsboksene går jo feil vei\", sier du? Nei, det gjør de ikke. Som venstrehendt har jeg alltid huket at bokser slik. Det tok meg mange år før jeg innså at 'vanlige' folk skriver hakene sine den andre veien.",
+    "par1": "\"Men hakene i disse avkryssningsboksene går jo feil vei\", sier du? Nei, det gjør de ikke. Som venstrehendt har jeg alltid huket av bokser slik. Det tok meg mange år før jeg innså at 'vanlige' folk skriver hakene sine den andre veien.",
     "par2": "Da jeg designet hakene til denne nettsiden var det helt naturlig for meg å lage haker som gikk mot venstre (siden det jo er sånn jeg ser dem i min egen håndskrift). Det var bare da jeg drev og finjusterte 'halene' at jeg kom på at at slike haker vanligvis går den andre veien. Jeg var i ferd med å endre dem for å tilpasse meg tradisjonelle UI komponenter.",
     "par3": "Men så tenkte jeg, HVORFOR det? Dette er min nettside og dette er en av mine skavanker. Jeg gir vanligvis min fulle støtte til å ikke endre ting som virker, og jeg er fullt klar over farene ved å bli for kreativ med ting folk forventer at skal fungere på en viss måte. MEN, hvis jeg ikke kan tillate meg å vise frem noen særegne trekk på min egen nettside, hvor er det da mulig?"
   },
-  "DisciplineSummaryBox":{
-    "button":"Se prosjekter"
+  "DisciplineSummaryBox": {
+    "button": "Se prosjekter"
   },
   "Contact": {
     "heading": "Lurer du på noe? Bare spør!",
