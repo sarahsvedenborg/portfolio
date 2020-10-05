@@ -32,7 +32,8 @@
         <br />
         <input class="textarea" id="message" type="textarea" />
           <br />-->
-          <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button>
+       <!--    <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button> -->
+          <button type="submit" >{{$t("Contact.button")}}*</button>
         </form>
         <p class="hint">
           *{{$t("Contact.hint1")}}
@@ -75,7 +76,9 @@ export default {
     handleSubmit() {
       console.log("handleSubmit")
       const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" },
+        header: { 
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
       };
       axios
         .post(
