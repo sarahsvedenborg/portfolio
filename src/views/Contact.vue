@@ -28,7 +28,7 @@
         <br />
         <input class="textarea" id="message" type="textarea" />
           <br />-->
-          <button @click="() => contectForm.submit()">{{$t("Contact.button")}}*</button>
+          <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button>
         </form>
          <p class="hint">*{{$t("Contact.hint1")}} <strong>{{$t("Contact.button")}}</strong> {{$t("Contact.hint2")}}.</p>
       </div>
@@ -53,6 +53,11 @@ export default {
       message: "",
     };
   },
+  methods:{
+    submit(){
+      console.log("form submitted")
+    }
+  }
 };
 </script>
 
