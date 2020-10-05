@@ -9,20 +9,24 @@
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          @submit.prevent="submit"
+          @submit.prevent="handleSubmit"
           ref="contactForm"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <TextInput :name="$t('Contact.inputNames.name')" :label="$t('Contact.inputLabels.name')" :inputChanged="(newName) => name = newName" />
+          <TextInput
+            :name="$t('Contact.inputNames.name')"
+            :label="$t('Contact.inputLabels.name')"
+            :inputChanged="(newName) => form.name = newName"
+          />
           <TextInput
             :name="$t('Contact.inputNames.email')"
             :label="$t('Contact.inputLabels.email')"
-            :inputChanged="(newEmail) => email = newEmail"
+            :inputChanged="(newEmail) => form.email = newEmail"
           />
           <TextArea
             :name="$t('Contact.inputNames.message')"
             :label="$t('Contact.inputLabels.message')"
-            :inputChanged="(newMessage) => message = newMessage"
+            :inputChanged="(newMessage) => form.message = newMessage"
           />
           <!--   <label for="message">Beskjed</label>
         <br />
@@ -30,7 +34,11 @@
           <br />-->
           <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button>
         </form>
-         <p class="hint">*{{$t("Contact.hint1")}} <strong>{{$t("Contact.button")}}</strong> {{$t("Contact.hint2")}}.</p>
+        <p class="hint">
+          *{{$t("Contact.hint1")}}
+          <strong>{{$t("Contact.button")}}</strong>
+          {{$t("Contact.hint2")}}.
+        </p>
       </div>
     </div>
   </div>
@@ -40,6 +48,7 @@
 import NavBar from "@/components/shared/NavBar";
 import TextInput from "@/components/shared/UI/TextInput";
 import TextArea from "@/components/shared/UI/TextArea";
+import axios from "axios";
 
 export default {
   components: { NavBar, TextInput, TextArea },
@@ -48,16 +57,42 @@ export default {
   },
   data() {
     return {
-      name: "",
-      email: "",
-      message: "",
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
     };
   },
-  methods:{
-    submit(){
-      console.log("form submitted")
-    }
-  }
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" },
+      };
+      axios
+        .post(
+          "/",
+          this.encode({
+            "form-name": "Contact form",
+            ...this.form,
+          }),
+          axiosConfig
+        )
+        .then(() => {
+          this.$router.push("success");
+        })
+        .catch(() => {
+          this.$router.push("404");
+        });
+    },
+  },
 };
 </script>
 
@@ -69,7 +104,7 @@ export default {
   height: 100vh;
 }
 
-form{
+form {
   margin-top: 5vh;
 }
 label {
@@ -96,7 +131,7 @@ button {
   margin: 1em;
 }
 
-.hint{
+.hint {
   color: var(--primary-color-dark);
   font-weight: normal;
   font-size: smaller;

@@ -53,6 +53,11 @@ const routes = [
     props: { preSelectedCategories: { "Front-end": false, "UX": true } }
   },
   {
+    path: '/success',
+    name: 'Success',
+    component: () => import('../views/Success.vue'),
+  },
+  {
     path: '/*',
     name: 'Not found',
     component: () => import('../views/NotFound.vue')
