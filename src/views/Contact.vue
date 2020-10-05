@@ -73,6 +73,7 @@ export default {
         .join("&");
     },
     handleSubmit() {
+      console.log("handleSubmit")
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" },
       };
@@ -86,9 +87,11 @@ export default {
           axiosConfig
         )
         .then(() => {
+          console.log("success")
           this.$router.push("success");
         })
         .catch(() => {
+            console.log("error")
           this.$router.push("404");
         });
     },
