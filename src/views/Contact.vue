@@ -84,7 +84,7 @@ export default {
         .post(
           "/",
           this.encode({
-            "form-name": "Contact form",
+            "form-name": "contact",
             ...this.form,
           }),
           axiosConfig
