@@ -128,13 +128,18 @@ input {
 
 button {
   background-color: var(--color-accent);
-  border-radius: 39px;
+border-radius: 39px;
   height: 3.5em;
-  width: 150px;
+  width: 125px;
   color: var(--color-light);
-  font-weight: bold;
-  border: none;
   margin: 1em;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 0px 1px 7px 0px var(--color-accent);
 }
 
 .hint {

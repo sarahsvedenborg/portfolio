@@ -4,8 +4,7 @@
     <div class="row">
       <div class="col col-10 md-8 lg-6 content">
         <div>
-          <img alt :src="require('@/assets/icons/' + frame)" width="200px" />
-
+          <div class="animationImage"></div>
           <div class="text">
             <h1 class="title title-large color-accent">Takk!</h1>
             <p>Din henvendelse er mottatt og vil bli besvart så fort som mulig.</p>
@@ -23,37 +22,8 @@
 <script>
 import NavBar from "@/components/shared/NavBar";
 
-const sprites = [
-  "Mailbox1.svg",
-  "Mailbox2.svg",
-  "Mailbox3.svg",
-  "Mailbox4.svg",
-  "Mailbox5.svg",
-];
-
-let myInterval = null;
-let index = 0;
-
 export default {
-  components: { NavBar },
-  mounted() {
-    setTimeout(() => {
-      myInterval = setInterval(() => {
-        this.changeFrame();
-      }, 100);
-    }, 500);
-  },
-  data() {
-    return {
-      frame: sprites[0],
-    };
-  },
-  methods: {
-    changeFrame() {
-      if (index == sprites.length - 2) clearInterval(myInterval);
-      this.frame = sprites[++index];
-    },
-  },
+  components: { NavBar },∑
 };
 </script>
 
@@ -81,9 +51,40 @@ p {
   font-weight: bold;
 }
 
+.animationImage {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/icons/Mailbox1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: changeImage;
+  animation-duration: 0.4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes changeImage {
+  0% {
+    background-image: url("../assets/icons/Mailbox1.svg");
+  }
+  25% {
+    background-image: url("../assets/icons/Mailbox2.svg");
+  }
+  50% {
+    background-image: url("../assets/icons/Mailbox3.svg");
+  }
+  75% {
+    background-image: url("../assets/icons/Mailbox4.svg");
+  }
+  100% {
+    background-image: url("../assets/icons/Mailbox5.svg");
+  }
+}
+
 .text {
   opacity: 0;
-   animation-name: fadeIn;
+  animation-name: fadeIn;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-fill-mode: forwards;

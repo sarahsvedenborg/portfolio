@@ -2,12 +2,14 @@
   <div class="disciplineSummaryBox">
     <h2 class="title title-medium color-accent">{{heading}}</h2>
     <slot />
-    <router-link :to="linkTo"><button>{{$t("DisciplineSummaryBox.button")}}</button></router-link>
+    <router-link :to="linkTo"><Button :label="$t('DisciplineSummaryBox.button')" outlined /></router-link>
   </div>
 </template>
 
 <script>
+import Button from '@/components/shared/UI/Button'
 export default {
+  components: {Button},
   props: {
     heading: {
       type: String,
@@ -39,5 +41,10 @@ button {
   margin: 1em;
   font-weight: bold;
   cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--color-accent);
+  color: var(--color-light);
 }
 </style>
