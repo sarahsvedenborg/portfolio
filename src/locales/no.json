@@ -152,5 +152,12 @@
     "messageReceived": "Din henvendelse er mottatt og vil bli besvart så fort som mulig.",
     "back": "Tilbake til",
     "homepage": "forsiden"
+  },
+  "Failure": {
+    "oups": "Ai ai ai",
+    "messageLost": "Her gikk noe galt og meldingen ble ikke sendt.",
+    "please": "Vennligst gå tilbake til",
+    "contactForm": "kontakt-skjemaet",
+    "tryAgain": "og prøv igjen"
   }
 }

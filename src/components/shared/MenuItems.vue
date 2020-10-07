@@ -12,7 +12,7 @@
     <li>
       <div class="languages">
         <TopBarIcon
-          v-if="$root.$i18n.locale == 'no'"
+          v-if="$root.$i18n.locale == 'nb_NO' || $root.$i18n.locale == 'no'"
           source="NorwayAccent.svg"
           :action="() => $root.$i18n.locale = 'no'"
           altText="Norway"
