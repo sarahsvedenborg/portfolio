@@ -152,5 +152,12 @@
     "messageReceived": "Your message has been received and will be answered as soon as possible.",
     "back": "Back to the",
     "homepage": "homepage"
+  },
+  "Failure": {
+    "oups": "Oups",
+    "messageLost": "Something went wrong and the message could not be sent.",
+    "please": "Please return to the",
+    "contactForm": "contact form",
+    "tryAgain": "and try again"
   }
 }

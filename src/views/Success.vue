@@ -45,7 +45,7 @@ export default {
 }
 
 a {
-  color: var(color-accent);
+  color: var(--color-accent);
 }
 
 p {
