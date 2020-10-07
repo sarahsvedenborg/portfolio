@@ -1,21 +1,24 @@
 <template>
-    <button @click="action ? action() : null">{{label}}</button>
+  <button @click="action ? action() : null" :type="buttonType ? buttonType : null">{{label}}</button>
 </template>
 
 <script>
 export default {
-    props:{
-        outlined: {
-            type: String
-        },
-        label: {
-            type: String
-        },
-        action: {
-            type: Function
-        }
-    }
-}
+  props: {
+    outlined: {
+      type: String,
+    },
+    label: {
+      type: String,
+    },
+    action: {
+      type: Function,
+    },
+    buttonType: {
+      type: String,
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -29,10 +32,12 @@ button {
   margin: 1em;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-button:hover{
+button:hover {
   background-color: var(--color-accent);
   color: var(--color-light);
+  transition: background-color 0.2s ease;
 }
 </style>

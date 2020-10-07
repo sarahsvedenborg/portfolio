@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>MailboxShell</title>
+    <g id="MailboxShell" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(24.000000, 28.000000)" fill="#000000" stroke="#FFFFFF" stroke-width="3">
+            <rect id="Rectangle" x="1.5" y="1.5" width="9" height="29" rx="4.5"></rect>
+        </g>
+        <path d="M44.914684,14.500075 C47.0622916,14.753029 48.708763,15.5674129 49.7959404,17.0422126 C50.9731806,18.6391859 51.5,20.9233337 51.5,23.8523948 L51.5,23.8523948 L51.5,34.500075 L18.5,34.500075 L18.5,14.500075 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="3" fill="#000000"></path>
+        <path d="M17.5781948,14.5 C20.1863691,14.5 22.1932723,15.1776607 23.5118658,16.6964565 C24.8924442,18.2866484 25.5,20.6974494 25.5,23.8523198 L25.5,23.8523198 L25.5,34.5000375 L9.5,34.5000375 L9.5,23.9972543 C9.54694653,20.7933951 10.1956167,18.3470737 11.6033879,16.7323256 C12.9457344,15.1926213 14.9644637,14.5 17.5781948,14.5 L17.5781948,14.5 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="3" fill="#000000"></path>
+        <line x1="13.5" y1="23.5" x2="21.5" y2="23.5" id="Line-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></line>
+    </g>
+</svg>
