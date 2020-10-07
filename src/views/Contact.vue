@@ -33,7 +33,7 @@
         <input class="textarea" id="message" type="textarea" />
           <br />-->
        <!--    <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button> -->
-          <button type="submit" >{{$t("Contact.button")}}*</button>
+          <Button type="submit" :label="$t('Contact.button') + '*'" />
         </form>
         <p class="hint">
           *{{$t("Contact.hint1")}}
@@ -49,10 +49,11 @@
 import NavBar from "@/components/shared/NavBar";
 import TextInput from "@/components/shared/UI/TextInput";
 import TextArea from "@/components/shared/UI/TextArea";
+import Button from "@/components/shared/UI/Button";
 import axios from "axios";
 
 export default {
-  components: { NavBar, TextInput, TextArea },
+  components: { NavBar, TextInput, TextArea, Button },
   created() {
     window.scrollTo(0, 0);
   },
@@ -122,22 +123,6 @@ input {
   background-color: var(--color-dark);
   width: 100%;
   margin: 1em 0em;
-}
-
-button {
-  background-color: var(--color-accent);
-border-radius: 39px;
-  height: 3.5em;
-  width: 125px;
-  color: var(--color-light);
-  margin: 1em;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover{
-  box-shadow: 0px 1px 7px 0px var(--color-accent);
 }
 
 .hint {

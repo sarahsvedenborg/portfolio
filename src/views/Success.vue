@@ -24,7 +24,7 @@
 <script>
 import NavBar from "@/components/shared/NavBar";
 export default {
-  components: { NavBar },
+  components: { NavBar }
 };
 </script>
 
