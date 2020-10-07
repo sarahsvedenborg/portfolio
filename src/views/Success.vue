@@ -8,11 +8,11 @@
             <img src="@/assets/icons/Flag.svg" class="animate" />
           </div>
           <div class="text">
-            <h1 class="title title-large color-accent">Takk!</h1>
-            <p>Din henvendelse er mottatt og vil bli besvart så fort som mulig.</p>
+            <h1 class="title title-large color-accent">{{$t('Success.thanks')}}!</h1>
+            <p>{{$t('Success.messageReceived')}}</p>
             <span>
-              Tilbake til
-              <router-link to="/">forsiden</router-link>
+              {{$t('Success.back')}}
+              <router-link to="/">{{$t('Success.homepage')}}</router-link>
             </span>
           </div>
         </div>

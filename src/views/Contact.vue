@@ -28,11 +28,6 @@
             :label="$t('Contact.inputLabels.message')"
             :inputChanged="(newMessage) => form.message = newMessage"
           />
-          <!--   <label for="message">Beskjed</label>
-        <br />
-        <input class="textarea" id="message" type="textarea" />
-          <br />-->
-       <!--    <button @click="() => $refs.contactForm.submit()">{{$t("Contact.button")}}*</button> -->
           <Button type="submit" :label="$t('Contact.button') + '*'" />
         </form>
         <p class="hint">
@@ -75,11 +70,11 @@ export default {
         .join("&");
     },
     handleSubmit() {
-      console.log("handleSubmit")
+      console.log("handleSubmit");
       const axiosConfig = {
-        header: { 
-          "Content-Type": "application/x-www-form-urlencoded"
-        }
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
       };
       axios
         .post(
