@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="9px" viewBox="0 0 21 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Flag</title>
+    <g id="Flag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(10.500000, 5.000000) rotate(90.000000) translate(-10.500000, -5.000000) translate(5.500000, -5.500000)" fill="#2ECA77">
+            <polygon id="Rectangle" points="2.05186328 2.66453526e-15 9.05186328 2.66453526e-15 9.05186328 4 2.05186328 5.08776855"></polygon>
+            <path d="M2.05186328,0 L4.04655303,0 L6.05205177,17 C6.3517308,19.6666667 5.35166797,21 3.05186328,21 C0.752058595,21 -0.247941405,19.6666667 0.0518632827,17 L2.05186328,0 Z" id="Rectangle"></path>
+        </g>
+    </g>
+</svg>

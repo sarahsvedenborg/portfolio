@@ -4,13 +4,15 @@
     <div class="row">
       <div class="col col-10 md-8 lg-6 content">
         <div>
-          <div class="animationImage"></div>
+          <div class="animationBackground">
+            <img src="@/assets/icons/Flag.svg" class="animate" />
+          </div>
           <div class="text">
-            <h1 class="title title-large color-accent">Takk!</h1>
-            <p>Din henvendelse er mottatt og vil bli besvart så fort som mulig.</p>
+            <h1 class="title title-large color-accent">{{$t('Success.thanks')}}!</h1>
+            <p>{{$t('Success.messageReceived')}}</p>
             <span>
-              Tilbake til
-              <router-link to="/">forsiden</router-link>
+              {{$t('Success.back')}}
+              <router-link to="/">{{$t('Success.homepage')}}</router-link>
             </span>
           </div>
         </div>
@@ -21,7 +23,6 @@
 
 <script>
 import NavBar from "@/components/shared/NavBar";
-
 export default {
   components: { NavBar }
 };
@@ -51,34 +52,34 @@ p {
   font-weight: bold;
 }
 
-.animationImage {
+.animationBackground {
+  position: relative;
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  background-image: url("../assets/icons/Mailbox1.svg");
+  background-image: url("../assets/icons/MailboxShell.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  animation-name: changeImage;
-  animation-duration: 0.4s;
-  animation-delay: 0.5s;
+}
+
+.animate {
+  position: absolute;
+  top: 65px;
+  left: 88px;
+  width: 60px;
+  transform-origin: 10px 8px;
+  animation-name: rotate;
+  animation-delay: 1s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
-@keyframes changeImage {
-  0% {
-    background-image: url("../assets/icons/Mailbox1.svg");
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  25% {
-    background-image: url("../assets/icons/Mailbox2.svg");
-  }
-  50% {
-    background-image: url("../assets/icons/Mailbox3.svg");
-  }
-  75% {
-    background-image: url("../assets/icons/Mailbox4.svg");
-  }
-  100% {
-    background-image: url("../assets/icons/Mailbox5.svg");
+  to {
+    transform: rotate(-90deg);
   }
 }
 
@@ -86,7 +87,7 @@ p {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 

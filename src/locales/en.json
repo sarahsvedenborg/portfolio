@@ -146,5 +146,11 @@
       "message": "Your message"
     }
   },
-  "Footer": "Designed and developed by Sarah Svedenborg"
+  "Footer": "Designed and developed by Sarah Svedenborg",
+  "Success": {
+    "thanks": "Thank you",
+    "messageReceived": "Your message has been received and will be answered as soon as possible.",
+    "back": "Back to the",
+    "homepage": "homepage"
+  }
 }

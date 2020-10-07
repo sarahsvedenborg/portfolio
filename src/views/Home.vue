@@ -80,6 +80,7 @@ export default {
   created() {
     window.scrollTo(0, 0);
     window.addEventListener("scroll", this.handleScroll);
+    console.log("lang", this.$root.$i18n.locale)
   },
   mounted() {
     setTimeout(() => {
