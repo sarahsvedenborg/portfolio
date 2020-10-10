@@ -10,10 +10,8 @@
         alt="screenshot of website"
         :src="require('@/assets/screenshots/' + project.screenshots[0])"
       />
-      <div
-        class="info"
-        :class="{mobileInfo: isMobile}"
-      >
+      <div class="info" :class="{mobileInfo: isMobile}">
+      <WIPbanner v-if="project.wip && project.wip == true" :placement="index % 2 == 0 ? 'left' : 'right'"/>
         <img class="logo" :src="require('@/assets/' + project.technologyIcon)" width="30px" />
         <h3 class="subtitle title-small">{{project.name}}</h3>
         <div class="tagArea">
@@ -28,8 +26,9 @@
 
 <script>
 import Tag from "@/components/shared/Tag";
+import WIPbanner from "@/components/shared/WIPbanner";
 export default {
-  components: { Tag },
+  components: { Tag, WIPbanner },
   props: {
     project: {
       type: Object,
@@ -49,6 +48,7 @@ export default {
 
 <style scoped>
 .card {
+  position: relative;
   display: flex;
   margin: 5vh 0px;
   border: 1px solid gray;
@@ -57,6 +57,7 @@ export default {
 }
 
 .info {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

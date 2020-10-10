@@ -27,7 +27,7 @@
         :distanceToTop="40"
         absolutePos
       />
-      <div class="col col-11 lg-6">
+      <div class="col col-11 md-8 lg-6">
         <img alt="profile picture" src="@/assets/Sarah.svg" class="col col-4 lg-5" />
         <p>{{$t('About.section1.par1')}}</p>
         <p>{{$t('About.section1.par2')}}</p>
