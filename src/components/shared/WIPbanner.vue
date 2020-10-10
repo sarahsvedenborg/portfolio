@@ -37,7 +37,7 @@ export default {
 
 .left {
   top: 45px;
-  right: 175px;
+  left: -55px;
   transform: rotate(-45deg);
 }
 
