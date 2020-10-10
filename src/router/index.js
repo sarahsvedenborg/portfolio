@@ -58,6 +58,11 @@ const routes = [
     component: () => import('../views/Success.vue'),
   },
   {
+    path: '/failure',
+    name: 'Failure',
+    component: () => import('../views/Failure.vue'),
+  },
+  {
     path: '/*',
     name: 'Not found',
     component: () => import('../views/NotFound.vue')

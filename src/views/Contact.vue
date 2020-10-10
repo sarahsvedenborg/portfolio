@@ -89,7 +89,7 @@ export default {
           this.$router.push("success");
         })
         .catch(() => {
-          this.$router.push("404");
+          this.$router.push("failure");
         });
     },
   },
