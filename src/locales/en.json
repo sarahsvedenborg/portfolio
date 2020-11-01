@@ -74,7 +74,7 @@
     "section1": {
       "par1": "Hello! My name is Sarah Svedenborg and I have an interdisciplinary approach to life. My interests range from languages to teaching to Norwegian national costume embroidery to sewing to programming. I am a creative person and programming is yet another area in which I can exercise my creativity. As oppsosed to making clothes, the practical thing about coding projects is that they do not demand space in a cupboard.",
       "par2": "I am happy when I can alter between working alone and collaborating with others, and I am passionate about the human aspect of IT. I would label myself as a UX engineer as I have great interst, and education, in both UX and software development. Even within the field of computer science, I have an interdisciplinary approach.",
-      "par3": "Besides obtaining 10 years of higher education in recent years (langues, development studies, mathematics, computer scinence, and UX) and numerous hobbies, I have been blessed with 4 children.",
+      "par3": "Besides obtaining 10 years of higher education in recent years (languages, development studies, mathematics, computer scinence, and UX) and numerous hobbies, I have been blessed with 4 children.",
       "par4": "Naturally, this affects my daily life and I value family greatly. I am very interested in areas related to children, and the combination of teaching and programming. In fact, a teaching degree is the only education I have started which I have yet to complete."
     },
     "educationList": [
@@ -123,7 +123,7 @@
   },
   "FunFact": {
     "heading": "Fun Fact",
-    "par1": "The ticks in the checkboxes are going the wrong way you say? No, they are not. I’m left handed, and this is the way I have always ticked my boxes. Took me years to realize that ‘normal’ people tick their boxes the opposite way.",
+    "par1": "The ticks in the checkboxes are going the wrong way you say? No, they are not. I’m left handed, and this is the way I have always ticked my boxes. It took me years to realize that ‘normal’ people tick their boxes the opposite way.",
     "par2": "When designing the ticks for the checkboxes on this website, I instinctively made them tapering off to the left (as I am used to seeing them in my own handwriting). However, when tweaking the «tail» I realized that they normally face the other way, and was about to change them to conform with traditional UI components.",
     "par3": "But then I thought, WHY? This is my website, and this is one of my quirks. I’m all for not changing what works and am aware of the dangers from getting creative with things people expect to work and certain way. BUT, if I can't get away with displaying a few personal quirks on my own website, then where?"
   },

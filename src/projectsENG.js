@@ -24,7 +24,7 @@ export const projectsENG = {
         gitHubURL: "https://github.com/sarahsvedenborg/forbarna",
         problem: "I need a website which can contain all the pedagogical games we make for our children.",
         demography: "Children, aged 6-9.",
-        technology: [['Framework', 'Vue.js'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Version control', 'Git'], ['Project planning', 'Trello']],
+        technology: [['Framework', 'Vue.js'], ['Backend', 'Firebase (Not yet implemented)'], ['Hosting', 'Netlify'], ['Version control', 'Git'], ['Project planning', 'Trello']],
         lessons: "Responsive design, iPad first, drag and drop on iPad, information hierarchy, CSS animations",
         other: "",
         acknowledgements: []
@@ -58,7 +58,7 @@ export const projectsENG = {
         technology: [['Framework', 'React'], ['Backend', 'Firebase'], ['Hosting', '?'], ['State management', 'Redux']],
         lessons: "Virtual list for backup, drag and drop, redux, react-router, react hooks,",
         other: "I have made this application from scratch.",
-        acknowledgements: [{what: 'Type of app', source: 'https://www.trello.com'}, {what: 'Drag and drop', source: 'https://www.google.com'}]
+        acknowledgements: [{what: 'Type of app', source: 'https://www.trello.com'}, {what: 'Drag and drop', source: 'https://github.com/atlassian/react-beautiful-dnd'}]
     },
     "retro-burger-builder": {
         wip: true,
@@ -71,7 +71,7 @@ export const projectsENG = {
         gitHubURL: "",
         problem: "Create an interface for people to order burgers",
         demography: "Fast food consumers",
-        technology: [['Framework', 'React'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Internal state management', 'Redux']],
+        technology: [['Framework', 'React'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Internal state management', 'Redux'], ['UI design', 'Sketch']],
         lessons: "Creating a new design based on a poster, improving navigation structure, more experience with Sketch, responsive assets",
         other: "The front-end code is based on the Burger Builder project (which is part of a React course taught on udemy.com by Maximillian Swartzmüller). In this specific project, I have redesigned the interface to provide a more popping impression and a smoother user experience.",
         acknowledgements: [{what: 'Poster for inspiration', source:"https://www.uidownload.com/free-vectors/retro-burger-menu-436692"}]

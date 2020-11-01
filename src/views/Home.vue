@@ -55,7 +55,7 @@
         <p>{{$t('Home.section3.par4')}}</p>
         <p v-if="$root.$i18n.locale == 'no'">
           Se
-          <a href="https://www.kode24.no" arget="_blank">innlegget mitt</a> på kode24.no for flere av tankene mine rundt UX utviklere.
+          <a href="https://www.kode24.no/kodenytt/mener-norge-trenger-flere-ux-utviklere/72871483" target="_blank">innlegget mitt</a> på kode24.no for flere av tankene mine rundt UX utviklere.
         </p>
       </DisciplineSummaryBox>
     </div>
