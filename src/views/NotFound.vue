@@ -1,14 +1,13 @@
 <template>
   <div class="notFound">
     <NavBar />
-    <img src="@/assets/SiteIcon.svg" width="600px" class="animate" />
-    <div class="appear">
-      <h1 class="title title-large">Oh nooo.....</h1>
-      <p>This site seems to have disappeared.</p>
-      <p>
-        Prøv å velge fra menyen eller gå tilbake til
-        <router-link to="/">forsiden</router-link>.
-      </p>
+    <div class="contentWrapper">
+      <div class="content">
+        <h2 class="title title-small">Denne siden finnes ikke.</h2>
+        <img class="image" src="@/assets/404.svg" />
+        <img class="needle" src="@/assets/CompassNeedle.svg" />
+      </div>
+      <router-link to="/" class="anchor color-accent title title-small">Gå hjem</router-link>
     </div>
   </div>
 </template>
@@ -27,46 +26,80 @@ export default {
 .notFound {
   height: 100vh;
 }
-img {
-  margin-top: 10vh;
+
+.contentWrapper {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.appear {
-  position: absolute;
-  top: 40vh;
-  left: 35%;
+.content {
+  position: relative;
+}
 
+.anchor {
   opacity: 0;
+  transform: translateY(-50px);
   animation-name: appear;
-  animation-delay: 2s;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
-.animate {
-  animation-name: vanish;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+a {
+  font-weight: bold;
 }
 
-@keyframes vanish {
-  from {
-    transform: scale(1);
-    opacity: 1;
+.needle {
+  position: absolute;
+  top: 114px;
+  left: 217px;
+  transform-origin: 9px 53px;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .image {
+    width: 270px;
   }
-  to {
-    transform: scale(0);
-    opacity: 0;
+  .anchor {
+    top: -23px;
+    right: 70px;
+    padding: 10px 20px;
+  }
+  .needle {
+    width: 12px;
+    height: 70px;
+    top: 81px;
+    left: 132px;
+    transform-origin: 6px 35px;
   }
 }
+
 @keyframes appear {
   from {
-    transform: scale(0);
+    transform: translateY(-50px) scale(0.5);
     opacity: 0;
   }
   to {
-    transform: scale(1);
+    transform: translateY(-20px) scale(1);
     opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(560deg);
+  }
+  100% {
+    transform: rotate(540deg);
   }
 }
 </style>

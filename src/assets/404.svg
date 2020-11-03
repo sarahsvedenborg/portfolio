@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="441px" height="199px" viewBox="0 0 441 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>404</title>
+    <g id="404" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="4" font-family="Avenir-Heavy, Avenir" font-size="200" font-weight="600" letter-spacing="40.666665" fill="#000000">
+            <tspan x="2" y="163">4</tspan>
+        </text>
+        <text id="4" font-family="Avenir-Heavy, Avenir" font-size="200" font-weight="600" letter-spacing="40.666665" fill="#000000">
+            <tspan x="320" y="163">4</tspan>
+        </text>
+        <g id="Compass" transform="translate(144.000000, 13.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="10" cx="82" cy="82" r="77"></circle>
+            <path d="M77,145 L82.5,145 C84.9852814,145 87,147.014719 87,149.5 C87,151.985281 84.9852814,154 82.5,154 L77,154 L77,154 L77,145 Z" id="Rectangle" fill="#000000" transform="translate(82.000000, 149.500000) scale(-1, -1) rotate(90.000000) translate(-82.000000, -149.500000) "></path>
+            <path d="M77,10 L82.5,10 C84.9852814,10 87,12.0147186 87,14.5 C87,16.9852814 84.9852814,19 82.5,19 L77,19 L77,19 L77,10 Z" id="Rectangle" fill="#000000" transform="translate(82.000000, 14.500000) scale(-1, 1) rotate(90.000000) translate(-82.000000, -14.500000) "></path>
+            <path d="M10,78 L15.5,78 C17.9852814,78 20,80.0147186 20,82.5 C20,84.9852814 17.9852814,87 15.5,87 L10,87 L10,87 L10,78 Z" id="Rectangle" fill="#000000"></path>
+            <path d="M144,78 L149.5,78 C151.985281,78 154,80.0147186 154,82.5 C154,84.9852814 151.985281,87 149.5,87 L144,87 L144,87 L144,78 Z" id="Rectangle" fill="#000000" transform="translate(149.000000, 82.500000) scale(-1, 1) translate(-149.000000, -82.500000) "></path>
+            <path d="M127,29 L130,29 C132.209139,29 134,30.790861 134,33 C134,35.209139 132.209139,37 130,37 L127,37 L127,37 L127,29 Z" id="Rectangle" fill="#000000" transform="translate(130.500000, 33.000000) scale(-1, 1) rotate(45.000000) translate(-130.500000, -33.000000) "></path>
+            <path d="M29,29 L32,29 C34.209139,29 36,30.790861 36,33 C36,35.209139 34.209139,37 32,37 L29,37 L29,37 L29,29 Z" id="Rectangle" fill="#000000" transform="translate(32.500000, 33.000000) rotate(45.000000) translate(-32.500000, -33.000000) "></path>
+            <path d="M30,30 L33,30 C35.209139,30 37,31.790861 37,34 C37,36.209139 35.209139,38 33,38 L30,38 L30,38 L30,30 Z" id="Rectangle" fill="#000000" transform="translate(33.500000, 34.000000) rotate(45.000000) translate(-33.500000, -34.000000) "></path>
+            <path d="M30,127 L33,127 C35.209139,127 37,128.790861 37,131 C37,133.209139 35.209139,135 33,135 L30,135 L30,135 L30,127 Z" id="Rectangle" fill="#000000" transform="translate(33.500000, 131.000000) scale(1, -1) rotate(45.000000) translate(-33.500000, -131.000000) "></path>
+            <path d="M127,127 L130,127 C132.209139,127 134,128.790861 134,131 C134,133.209139 132.209139,135 130,135 L127,135 L127,135 L127,127 Z" id="Rectangle" fill="#000000" transform="translate(130.500000, 131.000000) scale(-1, -1) rotate(45.000000) translate(-130.500000, -131.000000) "></path>
+        </g>
+    </g>
+</svg>

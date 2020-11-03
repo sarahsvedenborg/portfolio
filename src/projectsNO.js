@@ -24,7 +24,7 @@ export const projectsNO = {
         gitHubURL: "https://github.com/sarahsvedenborg/forbarna",
         problem: "Jeg trenger et nettsted som samler alle de små pedagogiske spillene vi lager til barna.",
         demography: "Barn 6-9 år.",
-        technology: [['Rammeverk', 'Vue.js'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Versjonskontroll', 'Git'], ['Projektplanlegging', 'Trello']],
+        technology: [['Rammeverk', 'Vue.js'], ['Backend', 'Firebase (Ikke implementert ennå)'], ['Hosting', 'Netlify'], ['Versjonskontroll', 'Git'], ['Projektplanlegging', 'Trello']],
         lessons: "Responsivt design, iPad first, drag and drop på iPad, informasjonsstruktur, CSS animasjoner",
         other: "",
         acknowledgements: []
@@ -58,7 +58,7 @@ export const projectsNO = {
         technology: [['Rammeverk', 'React'], ['Backend', 'Firebase'], ['Hosting', '?'], ['Statehåndtering', 'Redux']],
         lessons: "Virtuell liste for backup, drag and drop, redux, react-router, react hooks,",
         other: "Denne har jeg laget helt fra scratch",
-        acknowledgements: [{what: 'Type app', source: 'https://www.trello.com'}, {what: 'Drag and drop', source: 'https://www.google.com'}]
+        acknowledgements: [{what: 'Type app', source: 'https://www.trello.com'}, {what: 'Drag and drop', source: 'https://github.com/atlassian/react-beautiful-dnd'}]
     },
     "retro-burger-builder": {
         wip: true,
@@ -71,7 +71,7 @@ export const projectsNO = {
         gitHubURL: "",
         problem: "Lag en applikasjon som lar brukere sette sammen og bestille burgere.",
         demography: "Fast food-kunder",
-        technology: [['Rammeverk', 'React'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Intern state-håndtering', 'Redux']],
+        technology: [['Rammeverk', 'React'], ['Backend', 'Firebase'], ['Hosting', 'Netlify'], ['Intern state-håndtering', 'Redux'], ['UI design', 'Sketch']],
         lessons: "Lage et nytt design basert på en plakat, forbedre navigasjonsstruktur, mer erfering med Sketch, responsive assets",
         other: "Front-end koden er basert på Burger Builder-prosjeket som er laget som en del av et React-kurs på udemy.com med Maximillian Swartzmüller. I dette prosjektet er GUI-et redesignet for et freshere uttrykk og en smidigere brukeropplevelse.",
         acknowledgements: [{what: 'Plakaten som inspirerte', source:"https://www.uidownload.com/free-vectors/retro-burger-menu-436692"}]

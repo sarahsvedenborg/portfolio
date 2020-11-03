@@ -3,13 +3,17 @@
     <NavBar />
     <div class="row">
       <StopAtTop :distanceToTop="{initial:0, final:0}" :scrollY="scrollY">
-        <WIPbanner placement="right" />
+        <WIPbanner placement="right" v-if="project.wip && project.wip == true" />
       </StopAtTop>
       <div class="col lg-8">
         <h1 class="title title-large color-accent">{{project.name}}</h1>
         <ProjectSection :heading="$t('Project.problem')">
           <div class="problem">
-            <p>{{project.problem}}</p>
+            <p>
+              <img class="quote" src="@/assets/quoteStart.svg" />
+              {{project.problem}}
+              <img class="quote" src="@/assets/quoteEnd.svg" />
+            </p>
             <p>{{$t('Project.demography')}}: {{project.demography}}</p>
           </div>
         </ProjectSection>
@@ -102,20 +106,13 @@ export default {
 </script>
 
 <style scoped>
+.quote {
+  display: inline-block;
+  width: 1.5em;
+  padding: 0px 5px;
+}
 .problem {
   position: relative;
-}
-.problem::before {
-  content: url("../assets/quoteStart.svg");
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.problem::after {
-  content: url("../assets/quoteEnd.svg");
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 a {
