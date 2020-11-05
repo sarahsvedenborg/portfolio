@@ -2,6 +2,7 @@
   <div class="row">
     <div
       class="card"
+      @click="$router.push('/project/' + project.projectURL)"
       v-if="selectedCategory"
       :style="{'flex-direction': index % 2 == 0 ? 'row-reverse' : 'row'}"
     >
@@ -54,6 +55,7 @@ export default {
   border: 1px solid gray;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .info {
