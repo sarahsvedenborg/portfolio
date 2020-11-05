@@ -2,35 +2,36 @@
   <div>
     <NavBar />
     <div class="row">
-      <StopAtTop :distanceToTop="{initial:0, final:0}" :scrollY="scrollY">
-        <WIPbanner placement="right" v-if="project.wip && project.wip == true" />
+      <StopAtTop :distanceToTop="{ initial: 0, final: 0 }" :scrollY="scrollY">
+        <WIPbanner
+          placement="right"
+          v-if="project.wip && project.wip == true"
+        />
       </StopAtTop>
       <div class="col lg-8">
-        <h1 class="title title-large color-accent">{{project.name}}</h1>
+        <h1 class="title title-large color-accent">{{ project.name }}</h1>
         <ProjectSection :heading="$t('Project.problem')">
           <div class="problem">
             <p>
-              <img class="quote" src="@/assets/quoteStart.svg" />
-              {{project.problem}}
-              <img class="quote" src="@/assets/quoteEnd.svg" />
+              <!--   <img class="quote" src="@/assets/quoteStart.svg" /> -->
+              {{ project.problem }}
+              <!--  <img class="quote" src="@/assets/quoteEnd.svg" /> -->
             </p>
-            <p>{{$t('Project.demography')}}: {{project.demography}}</p>
+            <p>{{ $t("Project.demography") }}: {{ project.demography }}</p>
           </div>
         </ProjectSection>
         <ProjectSection :heading="$t('Project.solution')">
           <p v-if="project.gitHubURL != ''">
-            {{$t('Project.seeCode')}}
-            <a
-              :href="project.gitHubURL"
-              target="_blank"
-            >{{$t('Project.here')}}</a>
+            {{ $t("Project.seeCode") }}
+            <a :href="project.gitHubURL" target="_blank">{{
+              $t("Project.here")
+            }}</a>
           </p>
           <p v-if="project.siteURL != ''">
-            {{$t('Project.seeSite')}}
-            <a
-              :href="project.siteURL"
-              target="_blank"
-            >{{$t('Project.here')}}</a>
+            {{ $t("Project.seeSite") }}
+            <a :href="project.siteURL" target="_blank">{{
+              $t("Project.here")
+            }}</a>
           </p>
           <div class="images">
             <img
@@ -42,26 +43,25 @@
         </ProjectSection>
         <ProjectSection :heading="$t('Project.technology')">
           <ul class="technologies">
-            <li
-              v-for="technology in project.technology"
-              :key="technology[0]"
-            >{{technology[0]}}: {{technology[1]}}</li>
+            <li v-for="technology in project.technology" :key="technology[0]">
+              {{ technology[0] }}: {{ technology[1] }}
+            </li>
           </ul>
         </ProjectSection>
         <ProjectSection :heading="$t('Project.lessons')">
-          <p>{{project.lessons}}</p>
+          <p>{{ project.lessons }}</p>
         </ProjectSection>
         <ProjectSection :heading="$t('Project.other')" v-if="project.other">
-          <p>{{project.other}}</p>
+          <p>{{ project.other }}</p>
         </ProjectSection>
         <ProjectSection
           :heading="$t('Project.acknowledgements')"
           v-if="project.acknowledgements.length > 0"
         >
-          <h4 class="subtitle">{{$t('Project.acknowledgementsSub')}}</h4>
-          <p v-for="(item,i) in project.acknowledgements" :key="i">
-            {{item.what}}:
-            <a :href="item.source" target="_blank">{{item.source}}</a>
+          <h4 class="subtitle">{{ $t("Project.acknowledgementsSub") }}</h4>
+          <p v-for="(item, i) in project.acknowledgements" :key="i">
+            {{ item.what }}:
+            <a :href="item.source" target="_blank">{{ item.source }}</a>
           </p>
         </ProjectSection>
       </div>
